@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complete Renewal Checkout — InsureDrive</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container">
+      <a href="../index.html" class="brand-logo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-5.45 9-12V7l-9-5z"></path>
+          <path d="M12 8v8M8 12h8" stroke-linecap="round"></path>
+        </svg>
+        Insure<span class="accent">Drive</span>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../home2.html">Home 2</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="compare.html">Compare Quotes</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions-lux">
+        <button class="icon-btn-circle theme-toggle" title="Toggle Theme" aria-label="Toggle Theme">
+          <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+        </button>
+
+        <button class="btn-rtl-pill rtl-toggle" title="Toggle Direction">RTL</button>
+
+        <div class="portal-dropdown-wrapper">
+          <button class="icon-btn-circle profile-menu-toggle" title="Account Portals" aria-label="Account Portals">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </button>
+
+          <div class="portal-dropdown">
+            <div class="portal-dropdown-header">
+              <h4 class="portal-dropdown-title">InsureDrive Portals</h4>
+              <p class="portal-dropdown-subtitle">Customer & Management Access</p>
+            </div>
+            <ul class="portal-menu-list">
+              <li class="portal-menu-item">
+                <a href="login.html">
+                  <span class="portal-menu-icon">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3"/></svg>
+                  </span>
+                  <div>
+                    <div class="portal-menu-title">Sign In / Register</div>
+                    <div class="portal-menu-desc">Access customer dashboard</div>
+                  </div>
+                </a>
+              </li>
+              <li class="portal-menu-item">
+                <a href="../dashboard/index.html">
+                  <span class="portal-menu-icon">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                  </span>
+                  <div>
+                    <div class="portal-menu-title">Customer Dashboard</div>
+                    <div class="portal-menu-desc">Manage active policies</div>
+                  </div>
+                </a>
+              </li>
+              <li class="portal-menu-item">
+                <a href="../admin/index.html">
+                  <span class="portal-menu-icon">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  </span>
+                  <div>
+                    <div class="portal-menu-title">Admin Console</div>
+                    <div class="portal-menu-desc">InsureDrive management portal</div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <button class="mobile-nav-toggle" aria-label="Open Menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="section" style="padding-top: var(--space-8);">
+    <div class="container container-narrow">
+      
+      <!-- Wizard Progress Indicators -->
+      <div class="wizard-steps" style="margin-bottom: var(--space-8);">
+        <div class="wizard-step active">
+          <div class="wizard-step-icon">1</div>
+          <div class="wizard-step-label">Vehicle Info</div>
+        </div>
+        <div class="wizard-step">
+          <div class="wizard-step-icon">2</div>
+          <div class="wizard-step-label">Personal Info</div>
+        </div>
+        <div class="wizard-step">
+          <div class="wizard-step-icon">3</div>
+          <div class="wizard-step-label">Add-ons</div>
+        </div>
+        <div class="wizard-step">
+          <div class="wizard-step-icon">4</div>
+          <div class="wizard-step-label">Payment</div>
+        </div>
+      </div>
+
+      <!-- Checkout Form -->
+      <form id="checkoutForm" class="widget-card checkout-form-container" style="padding: var(--space-8);">
+        <!-- Step 1: Vehicle Details -->
+        <div class="wizard-panel active">
+          <h3 style="margin-bottom: var(--space-2);">Confirm Vehicle Details</h3>
+          <p class="text-sm text-secondary" style="margin-bottom: var(--space-6);">Ensure your RC details match insurance records.</p>
+          <div style="display: grid; gap: var(--space-4);">
+            <div>
+              <label for="coVehicleReg">Vehicle Registration Number *</label>
+              <input type="text" id="coVehicleReg" class="form-control" required uppercase value="TN-07-BX-8821">
+            </div>
+            <div class="form-row-2col">
+              <div>
+                <label for="coMake">Make / Model *</label>
+                <input type="text" id="coMake" class="form-control" value="Hyundai i20 Asta 1.2" required>
+              </div>
+              <div>
+                <label for="coRegYear">Registration Year *</label>
+                <input type="number" id="coRegYear" class="form-control" value="2021" required>
+              </div>
+            </div>
+            <div class="form-row-2col">
+              <div>
+                <label for="coChassis">Chassis Number (Last 5 digits) *</label>
+                <input type="text" id="coChassis" class="form-control" value="98231" required>
+              </div>
+              <div>
+                <label for="coEngine">Engine Number (Last 5 digits) *</label>
+                <input type="text" id="coEngine" class="form-control" value="44102" required>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2: Owner Details -->
+        <div class="wizard-panel" style="display: none;">
+          <h3 style="margin-bottom: var(--space-2);">Owner Details</h3>
+          <p class="text-sm text-secondary" style="margin-bottom: var(--space-6);">Policy certificate will be issued to this name.</p>
+          <div style="display: grid; gap: var(--space-4);">
+            <div>
+              <label for="coOwnerName">Full Name (As on RC) *</label>
+              <input type="text" id="coOwnerName" class="form-control" value="Rajesh Kumar" required>
+            </div>
+            <div class="form-row-2col">
+              <div>
+                <label for="coEmail">Email Address *</label>
+                <input type="email" id="coEmail" class="form-control" value="rajesh.kumar@example.com" required>
+              </div>
+              <div>
+                <label for="coPhone">Mobile Number *</label>
+                <input type="tel" id="coPhone" class="form-control" value="9876543210" required>
+              </div>
+            </div>
+            <div>
+              <label for="coPincode">Pin Code *</label>
+              <input type="text" id="coPincode" class="form-control" value="600020" required>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 3: Add-on Selection -->
+        <div class="wizard-panel" style="display: none;">
+          <h3 style="margin-bottom: var(--space-2);">Select Riders & Add-Ons</h3>
+          <p class="text-sm text-secondary" style="margin-bottom: var(--space-6);">Maximize your coverage during accidents.</p>
+          <div style="display: grid; gap: var(--space-3);">
+            <label class="flex items-center gap-3 p-3 border rounded cursor-pointer">
+              <input type="checkbox" id="addonZeroDep" checked>
+              <div>
+                <div style="font-weight: 600;">Zero Depreciation (+₹1,200)</div>
+                <div class="text-xs text-muted">100% claim payout without plastic/fiber depreciation deductions</div>
+              </div>
+            </label>
+            <label class="flex items-center gap-3 p-3 border rounded cursor-pointer">
+              <input type="checkbox" id="addonEngineProtect">
+              <div>
+                <div style="font-weight: 600;">Engine & Gearbox Protection (+₹750)</div>
+                <div class="text-xs text-muted">Covers water ingression & hydrostatic lock damages</div>
+              </div>
+            </label>
+            <label class="flex items-center gap-3 p-3 border rounded cursor-pointer">
+              <input type="checkbox" id="addonRsa" checked>
+              <div>
+                <div style="font-weight: 600;">24/7 Roadside Assistance (+₹400)</div>
+                <div class="text-xs text-muted">Free flat-tyre change, fuel delivery, and towing</div>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- Step 4: Payment Simulation -->
+        <div class="wizard-panel" style="display: none;">
+          <h3 style="margin-bottom: var(--space-2);">Payment Gateway</h3>
+          <p class="text-sm text-secondary" style="margin-bottom: var(--space-6);">Choose payment mode (Sandbox Simulation — No real money charged).</p>
+
+          <div class="quote-tabs">
+            <button type="button" class="quote-tab-btn active">UPI / QR Code</button>
+            <button type="button" class="quote-tab-btn">Credit / Debit Card</button>
+            <button type="button" class="quote-tab-btn">Net Banking</button>
+          </div>
+
+          <div style="background: var(--surface-alt); padding: var(--space-6); border-radius: var(--radius-md); text-align: center; margin-bottom: var(--space-6);">
+            <div style="margin-bottom: 8px; color: var(--primary);" class="flex justify-center">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+            </div>
+            <div style="font-weight: 700;">UPI ID: insuredrive@sandbox</div>
+            <div class="text-xs text-muted">Click 'Pay Now' below to simulate instant payment authorization.</div>
+          </div>
+        </div>
+
+        <!-- Step 5: Confirmation State -->
+        <div class="wizard-panel" style="display: none;">
+          <div class="text-center" style="padding: var(--space-6) 0;">
+            <div style="width: 64px; height: 64px; border-radius: 9999px; background: var(--success-bg); color: var(--success); font-size: 2rem; display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-4);">
+              ✓
+            </div>
+            <h2>Your Insurance Renewal is Confirmed!</h2>
+            <p class="text-sm text-secondary" style="margin-bottom: var(--space-6);">
+              Policy Schedule & Tax Invoice have been issued and sent to your email.
+            </p>
+
+            <div class="widget-card text-left" style="background: var(--surface-alt); padding: var(--space-6); margin-bottom: var(--space-6);">
+              <div class="flex justify-between text-sm" style="margin-bottom: 8px;">
+                <span>Policy Number:</span>
+                <strong style="color: var(--secondary);">INS-2026-45892</strong>
+              </div>
+              <div class="flex justify-between text-sm" style="margin-bottom: 8px;">
+                <span>Insured Vehicle:</span>
+                <strong>Hyundai i20 (TN 01 AB 1234)</strong>
+              </div>
+              <div class="flex justify-between text-sm" style="margin-bottom: 8px;">
+                <span>Insurer Partner:</span>
+                <strong>SecureDrive Insurance</strong>
+              </div>
+              <div class="flex justify-between text-sm">
+                <span>Valid Until:</span>
+                <strong>18 October 2026</strong>
+              </div>
+            </div>
+
+            <div class="flex gap-4 confirmation-actions">
+              <button class="btn btn-primary flex-1" onclick="downloadSampleDocument('INS-2026-45892')">↓ Download Policy PDF</button>
+              <a href="../dashboard/index.html" class="btn btn-accent flex-1">Go to Customer Dashboard →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Live Price Calculation Bar -->
+        <div style="border-top: 1px solid var(--border); padding-top: var(--space-6); margin-top: var(--space-6);" id="checkoutSummaryBar">
+          <div class="flex justify-between text-sm" style="margin-bottom: 4px;">
+            <span>Subtotal Premium:</span>
+            <strong id="summarySubtotal">₹14,450</strong>
+          </div>
+          <div class="flex justify-between text-sm" style="margin-bottom: 4px; color: var(--text-secondary);">
+            <span>Statutory GST (18%):</span>
+            <strong id="summaryGST">₹2,601</strong>
+          </div>
+          <div class="flex justify-between" style="font-size: 1.15rem; font-weight: 800; border-top: 1px dashed var(--border); padding-top: 8px; margin-top: 8px;">
+            <span>Total Payable Amount:</span>
+            <span style="color: var(--secondary);" id="summaryFinalTotal">₹17,051</span>
+          </div>
+        </div>
+
+        <!-- Wizard Nav Actions -->
+        <div class="flex justify-between gap-4 wizard-nav-actions" style="margin-top: var(--space-8);">
+          <button type="button" class="btn btn-secondary" id="wizardPrevBtn" style="display: none;">← Previous Step</button>
+          <button type="button" class="btn btn-primary" id="wizardNextBtn">Continue to Next Step →</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>© 2026 InsureDrive Financial Technologies Ltd. All rights reserved.</div>
+        <div><a href="../index.html" style="color: var(--text-muted);">Back to Home</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/data.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+  <script src="../assets/js/checkout.js"></script>
+</body>
+</html>

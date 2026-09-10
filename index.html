@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InsureDrive — Car Insurance Made Simple</title>
+  <meta name="description" content="Compare car insurance plans from top Indian insurers, understand your coverage, and renew your policy with zero paperwork.">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/dark-mode.css">
+</head>
+<body>
+
+  <!-- Navigation Bar (Image 3) -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="brand-logo-lux">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.2">
+          <path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-5.45 9-12V7l-9-5z"></path>
+          <path d="M12 8v8M8 12h8" stroke-linecap="round"></path>
+        </svg>
+        <div>
+          <span>Insure<span style="color: #2563EB;">Drive</span></span>
+          <span class="logo-subtext">AUTOMOTIVE FINTECH</span>
+        </div>
+      </a>
+
+      <!-- Centered Spaced Navigation Links -->
+      <nav class="desktop-nav">
+        <ul class="nav-links-lux">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="home2.html">Home 2</a></li>
+          <li><a href="pages/about.html">About</a></li>
+          <li><a href="pages/compare.html">Services</a></li>
+          <li><a href="pages/blog.html">Blog</a></li>
+          <li><a href="pages/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right Header Actions (Image 2 & 3) -->
+      <div class="nav-actions-lux">
+        <!-- Theme Toggle -->
+        <button class="icon-btn-circle theme-toggle" title="Toggle Theme" aria-label="Toggle Theme">
+          <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+        </button>
+
+        <!-- RTL Toggle Pill -->
+        <button class="btn-rtl-pill rtl-toggle" title="Toggle Direction">RTL</button>
+
+        <!-- Profile Icon Dropdown Trigger -->
+        <div class="portal-dropdown-wrapper">
+          <button class="icon-btn-circle profile-menu-toggle" title="Account Portals" aria-label="Account Portals">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </button>
+
+          <!-- Portals Popover Menu (Image 2) -->
+          <div class="portal-dropdown" id="portalPopoverIndex">
+            <div class="portal-dropdown-header">
+              <h4 class="portal-dropdown-title">InsureDrive Portals</h4>
+              <p class="portal-dropdown-subtitle">Customer & Management Access</p>
+            </div>
+            <ul class="portal-menu-list">
+              <li class="portal-menu-item">
+                <a href="pages/login.html">
+                  <span class="portal-menu-icon">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3"/></svg>
+                  </span>
+                  Login
+                </a>
+              </li>
+              <li class="portal-menu-item">
+                <a href="pages/quote.html">
+                  <span class="portal-menu-icon">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="17" y1="11" x2="23" y2="11"/></svg>
+                  </span>
+                  Signup
+                </a>
+              </li>
+              <li class="portal-menu-item">
+                <a href="dashboard/index.html">
+                  <span class="portal-menu-icon">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                  </span>
+                  User Dashboard
+                </a>
+              </li>
+              <li class="portal-menu-item">
+                <a href="admin/index.html">
+                  <span class="portal-menu-icon">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  </span>
+                  Admin Dashboard
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Mobile Drawer Toggle -->
+        <button class="mobile-nav-toggle" aria-label="Open Menu" style="margin-left: 4px;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 1. Hero Section -->
+  <section class="hero" style="padding: var(--space-12) 0 var(--space-12) 0; background: linear-gradient(180deg, #F0F4F8 0%, var(--background) 100%);">
+    <div class="container">
+      <div class="hero-grid">
+        
+        <div class="hero-content">
+          <span class="badge badge-success" style="margin-bottom: var(--space-4); font-size: 0.8rem; padding: 0.35rem 0.85rem; font-weight: 700;">
+            INSURANCE RENEWAL & COMPARISON
+          </span>
+          <h1 style="font-size: 3.25rem; line-height: 1.15; margin-bottom: var(--space-4); color: var(--primary); font-weight: 800;">
+            Car insurance, <br><span style="color: var(--accent);">made simple.</span>
+          </h1>
+          <p class="hero-subtext" style="font-size: 1.125rem; color: var(--text-secondary); margin-bottom: var(--space-8); max-width: 520px; line-height: 1.6;">
+            Compare plans from multiple insurers, understand your coverage, and renew the policy that's right for you.
+          </p>
+
+          <div class="hero-ctas" style="display: flex; gap: var(--space-4); margin-bottom: var(--space-6); flex-wrap: wrap;">
+            <a href="pages/compare.html" class="btn btn-accent btn-lg" style="font-weight: 700;">Compare Insurance →</a>
+            <a href="#quote-section" class="btn btn-secondary btn-lg" style="font-weight: 600;">Renew Existing Policy</a>
+          </div>
+
+          <div style="font-size: 0.875rem; color: var(--text-secondary); font-weight: 600; display: flex; align-items: center; gap: 8px;">
+            <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--accent);"></span>
+            No paperwork • Compare multiple plans • Quick renewal
+          </div>
+        </div>
+
+        <!-- Right Side Premium Car Photograph -->
+        <div>
+          <div class="hero-car-card" style="aspect-ratio: 16 / 10; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); border: 1px solid var(--border); overflow: hidden; position: relative; background: var(--surface);">
+            <img src="assets/images/hero-car.jpg" alt="Premium Executive Car" class="hero-car-img" loading="eager" onerror="this.src='assets/images/hero_car.png'" style="width: 100%; height: 100%; object-fit: cover;">
+            <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: var(--space-4) var(--space-6); background: linear-gradient(0deg, rgba(16, 42, 67, 0.9) 0%, rgba(16, 42, 67, 0) 100%); color: #fff; display: flex; align-items: center; justify-content: space-between;">
+              <div>
+                <strong style="font-size: 0.95rem; display: block;">Executive SUV Comprehensive Cover</strong>
+                <span style="font-size: 0.8rem; opacity: 0.9;">Instant Digital Renewal • Cashless Network</span>
+              </div>
+              <span class="badge badge-success" style="font-size: 0.75rem;">Verified Protection</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Vehicle Quote Section -->
+  <section class="section" id="quote-section" style="padding: var(--space-8) 0; background: var(--background);">
+    <div class="container" style="max-width: 900px;">
+      <div class="quote-card" style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: var(--space-8); box-shadow: var(--shadow-md);">
+        
+        <div class="text-center" style="margin-bottom: var(--space-6);">
+          <h2 style="font-size: 1.85rem; color: var(--primary); margin-bottom: 6px;">Get your car insurance quote</h2>
+          <p class="text-sm text-secondary">Enter your vehicle registration number or upload your existing policy schedule to compare options.</p>
+        </div>
+
+        <div class="quote-tabs" style="margin-bottom: var(--space-6);">
+          <button class="quote-tab-btn active" data-target="panelReg">Vehicle Registration</button>
+          <button class="quote-tab-btn" data-target="panelUpload">Upload Existing Policy</button>
+        </div>
+
+        <!-- Option 1: Vehicle Reg Input -->
+        <div class="quote-panel" id="panelReg" style="display: block;">
+          <form id="regLookupForm">
+            <div class="form-group">
+              <label class="form-label" for="vehicleRegInput" style="font-weight: 600; color: var(--primary);">Vehicle Registration Number</label>
+              <div style="display: flex; gap: var(--space-3); flex-wrap: wrap;">
+                <input type="text" id="vehicleRegInput" class="form-input" placeholder="TN 01 AB 1234" value="TN 01 AB 1234" maxlength="13" required style="font-weight: 700; font-size: 1.15rem; letter-spacing: 0.05em; text-transform: uppercase; flex: 1; min-width: 220px; padding: 0.85rem 1rem;">
+                <button type="submit" class="btn btn-accent btn-lg" style="font-weight: 700; min-width: 180px;">Get My Quotes →</button>
+              </div>
+              <div class="form-error" id="regInputError" style="margin-top: 6px;">Format error — enter valid registration (e.g. TN 01 AB 1234).</div>
+            </div>
+            <div class="text-center text-xs text-muted" style="margin-top: var(--space-2);">
+              Instant quote generation • 100% Secure • IRDAI Registered Platform
+            </div>
+          </form>
+        </div>
+
+        <!-- Option 2: Upload Existing Policy -->
+        <div class="quote-panel" id="panelUpload" style="display: none;">
+          <div class="dropzone" id="policyDropzone" style="padding: var(--space-8) var(--space-4); border: 2px dashed var(--border-strong); border-radius: var(--radius-lg); background: var(--surface-alt); text-align: center; cursor: pointer;">
+            <svg width="40" height="40" fill="none" stroke="var(--accent)" viewBox="0 0 24 24" style="margin: 0 auto 12px;" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
+            </svg>
+            <div style="font-weight: 700; color: var(--primary); font-size: 1.05rem;">Upload your existing policy</div>
+            <div class="text-xs text-secondary" style="margin-top: 4px;">Supports PDF, JPG, PNG</div>
+            <input type="file" id="policyFileInput" style="display: none;" accept=".pdf,.jpg,.jpeg,.png">
+          </div>
+          <div id="uploadStatus" style="margin-top: 12px; font-size: 0.85rem; text-align: center;"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Why InsureDrive -->
+  <section class="section" style="background: var(--surface);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" style="color: var(--accent);">Why InsureDrive</span>
+        <h2 class="section-title">Clear, transparent car insurance</h2>
+        <p class="section-description">Everything you need to make an informed policy choice without sales pressure.</p>
+      </div>
+
+      <div class="category-cards-grid" style="gap: var(--space-6);">
+        
+        <div class="category-card" style="padding: var(--space-8); border-radius: var(--radius-lg); border: 1px solid var(--border);">
+          <div class="category-icon-box" style="background: var(--accent-light); color: var(--accent); width: 48px; height: 48px; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-4);">
+            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"/></svg>
+          </div>
+          <h3 style="font-size: 1.25rem; color: var(--primary); margin-bottom: var(--space-2);">1. Compare before you renew</h3>
+          <p class="text-secondary" style="font-size: 0.95rem; line-height: 1.6;">See premiums, coverage and add-ons side-by-side.</p>
+        </div>
+
+        <div class="category-card" style="padding: var(--space-8); border-radius: var(--radius-lg); border: 1px solid var(--border);">
+          <div class="category-icon-box" style="background: var(--accent-light); color: var(--accent); width: 48px; height: 48px; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-4);">
+            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <h3 style="font-size: 1.25rem; color: var(--primary); margin-bottom: var(--space-2);">2. Understand your coverage</h3>
+          <p class="text-secondary" style="font-size: 0.95rem; line-height: 1.6;">Know exactly what you're paying for before you buy.</p>
+        </div>
+
+        <div class="category-card" style="padding: var(--space-8); border-radius: var(--radius-lg); border: 1px solid var(--border);">
+          <div class="category-icon-box" style="background: var(--accent-light); color: var(--accent); width: 48px; height: 48px; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-4);">
+            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+          </div>
+          <h3 style="font-size: 1.25rem; color: var(--primary); margin-bottom: var(--space-2);">3. Manage everything in one place</h3>
+          <p class="text-secondary" style="font-size: 0.95rem; line-height: 1.6;">Keep policies, documents and renewal dates together.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. How It Works -->
+  <section class="section" style="background: var(--surface-alt);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" style="color: var(--accent);">How It Works</span>
+        <h2 class="section-title">Four simple steps to policy renewal</h2>
+        <p class="section-description">A streamlined online experience designed for clarity and speed.</p>
+      </div>
+
+      <div class="process-steps-grid">
+        
+        <div class="process-step-item" style="background: var(--surface); border-radius: var(--radius-lg); padding: var(--space-6); border: 1px solid var(--border);">
+          <div class="process-step-num" style="color: var(--accent); font-size: 1.5rem; font-weight: 800;">01</div>
+          <h4 style="color: var(--primary); margin-bottom: 6px; font-size: 1.1rem;">Enter your vehicle details</h4>
+          <p class="text-xs text-secondary">Provide your car registration number or upload your existing policy.</p>
+        </div>
+
+        <div class="process-step-item" style="background: var(--surface); border-radius: var(--radius-lg); padding: var(--space-6); border: 1px solid var(--border);">
+          <div class="process-step-num" style="color: var(--accent); font-size: 1.5rem; font-weight: 800;">02</div>
+          <h4 style="color: var(--primary); margin-bottom: 6px; font-size: 1.1rem;">Compare available plans</h4>
+          <p class="text-xs text-secondary">Review verified quotes side-by-side from top general insurance providers.</p>
+        </div>
+
+        <div class="process-step-item" style="background: var(--surface); border-radius: var(--radius-lg); padding: var(--space-6); border: 1px solid var(--border);">
+          <div class="process-step-num" style="color: var(--accent); font-size: 1.5rem; font-weight: 800;">03</div>
+          <h4 style="color: var(--primary); margin-bottom: 6px; font-size: 1.1rem;">Choose your coverage</h4>
+          <p class="text-xs text-secondary">Select your preferred IDV, zero depreciation, and add-on protections.</p>
+        </div>
+
+        <div class="process-step-item" style="background: var(--surface); border-radius: var(--radius-lg); padding: var(--space-6); border: 1px solid var(--border);">
+          <div class="process-step-num" style="color: var(--accent); font-size: 1.5rem; font-weight: 800;">04</div>
+          <h4 style="color: var(--primary); margin-bottom: 6px; font-size: 1.1rem;">Renew and receive policy</h4>
+          <p class="text-xs text-secondary">Complete payment securely and download your e-policy instantly.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Insurance Types (Enhanced with Images) -->
+  <section class="section" style="background: var(--surface);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" style="color: var(--accent);">Insurance Products</span>
+        <h2 class="section-title">Choose the right coverage type</h2>
+        <p class="section-description">Select between comprehensive protection or essential legal cover.</p>
+      </div>
+
+      <div class="insurance-types-grid">
+        
+        <div style="background: var(--surface-alt); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: var(--space-8); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div class="product-card-media" style="height: 180px; border-radius: var(--radius-md); overflow: hidden; margin-bottom: var(--space-4);">
+              <img src="assets/images/suv_car.png" alt="Comprehensive Insurance SUV" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <span class="badge badge-success" style="margin-bottom: var(--space-3); font-size: 0.75rem;">MOST POPULAR</span>
+            <h3 style="font-size: 1.5rem; color: var(--primary); margin-bottom: var(--space-3);">Comprehensive Insurance</h3>
+            <p class="text-secondary" style="font-size: 1rem; line-height: 1.6; margin-bottom: var(--space-6);">
+              Protection for your car along with third-party liabilities.
+            </p>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: var(--space-6);" class="text-secondary text-sm">
+              <li class="flex items-center gap-2"><svg width="16" height="16" fill="none" stroke="var(--accent)" viewBox="0 0 24 24" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Accidental damage & theft protection</li>
+              <li class="flex items-center gap-2"><svg width="16" height="16" fill="none" stroke="var(--accent)" viewBox="0 0 24 24" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Mandatory third-party legal cover</li>
+              <li class="flex items-center gap-2"><svg width="16" height="16" fill="none" stroke="var(--accent)" viewBox="0 0 24 24" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Zero depreciation & engine protection add-ons</li>
+            </ul>
+          </div>
+          <a href="pages/compare.html" class="btn btn-accent w-full font-semibold">Explore Comprehensive →</a>
+        </div>
+
+        <div style="background: var(--surface-alt); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: var(--space-8); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div class="product-card-media" style="height: 180px; border-radius: var(--radius-md); overflow: hidden; margin-bottom: var(--space-4);">
+              <img src="assets/images/vehicle_card.png" alt="Third-Party Insurance Sedan" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <span class="badge badge-neutral" style="margin-bottom: var(--space-3); font-size: 0.75rem;">MANDATORY COVER</span>
+            <h3 style="font-size: 1.5rem; color: var(--primary); margin-bottom: var(--space-3);">Third-Party Insurance</h3>
+            <p class="text-secondary" style="font-size: 1rem; line-height: 1.6; margin-bottom: var(--space-6);">
+              Essential legal protection for third-party damages.
+            </p>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: var(--space-6);" class="text-secondary text-sm">
+              <li class="flex items-center gap-2"><svg width="16" height="16" fill="none" stroke="var(--accent)" viewBox="0 0 24 24" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Statutory legal liability requirement</li>
+              <li class="flex items-center gap-2"><svg width="16" height="16" fill="none" stroke="var(--accent)" viewBox="0 0 24 24" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Property damage & injury liability cover</li>
+              <li class="flex items-center gap-2"><svg width="16" height="16" fill="none" stroke="var(--accent)" viewBox="0 0 24 24" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Personal accident cover for owner-driver</li>
+            </ul>
+          </div>
+          <a href="pages/compare.html" class="btn btn-secondary w-full font-semibold">Explore Third-Party →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Savings / Comparison Section -->
+  <section class="section" style="background: var(--surface-alt);">
+    <div class="container" style="max-width: 960px;">
+      <div class="section-header" style="margin-bottom: var(--space-8);">
+        <span class="section-tag" style="color: var(--accent);">Direct Savings</span>
+        <h2 class="section-title">See how much you can save</h2>
+        <p class="section-description">Compare your existing renewal quote with recommended options on our platform.</p>
+      </div>
+
+      <div class="price-comparison-block" style="background: #0F172A; color: #fff; padding: var(--space-8); border-radius: var(--radius-xl); box-shadow: var(--shadow-lg);">
+        <div style="gap: var(--space-6); text-align: center; align-items: center;" class="price-comparison-block-grid">
+          
+          <div>
+            <div style="font-size: 0.8rem; text-transform: uppercase; color: #94A3B8; letter-spacing: 0.04em; margin-bottom: 4px;">Current Renewal Quote</div>
+            <div style="font-size: 2rem; font-weight: 800; font-family: var(--font-heading); color: #CBD5E1; text-decoration: line-through;">₹18,450</div>
+            <div style="font-size: 0.75rem; color: #94A3B8; margin-top: 2px;">Offline Agent Quote</div>
+          </div>
+
+          <div>
+            <div style="font-size: 0.8rem; text-transform: uppercase; color: #94A3B8; letter-spacing: 0.04em; margin-bottom: 4px;">Recommended Renewal</div>
+            <div style="font-size: 2.25rem; font-weight: 800; font-family: var(--font-heading); color: #fff;">₹15,890</div>
+            <div style="font-size: 0.75rem; color: #94A3B8; margin-top: 2px;">InsureDrive Best Rate</div>
+          </div>
+
+          <div>
+            <div style="font-size: 0.8rem; text-transform: uppercase; color: #94A3B8; letter-spacing: 0.04em; margin-bottom: 4px;">Potential Savings</div>
+            <div style="font-size: 2.25rem; font-weight: 800; font-family: var(--font-heading); color: #34D399;">₹2,560</div>
+            <span class="badge badge-success" style="margin-top: 4px; font-size: 0.75rem;">13.9% Lower Premium</span>
+          </div>
+
+        </div>
+
+        <div class="text-center" style="margin-top: var(--space-8); padding-top: var(--space-6); border-top: 1px solid rgba(255,255,255,0.1);">
+          <a href="pages/compare.html" class="btn btn-accent btn-lg" style="font-weight: 700;">Compare My Options →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6.5 ABOUT INSUREDRIVE SECTION (Inspired by RepairHub Clean Layout) -->
+  <section class="section" style="background: var(--surface);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" style="color: var(--accent);">About InsureDrive</span>
+        <h2 class="section-title">Built for Transparency, Speed & Trust</h2>
+        <p class="section-description">We simplify car insurance renewals so Indian vehicle owners get honest policy coverage without spam phone calls.</p>
+      </div>
+
+      <div style="gap: 20px;" class="category-cards-grid">
+        
+        <div class="category-card" style="padding: 24px; border-radius: var(--radius-lg); border: 1px solid var(--border); background: var(--surface);">
+          <div style="font-size: 2rem; margin-bottom: 12px;">🛡️</div>
+          <h4 style="color: var(--primary); font-size: 1.1rem; margin-bottom: 6px; font-weight: 700;">IRDAI Compliant</h4>
+          <p class="text-xs text-secondary" style="line-height: 1.5;">Licensed web aggregator platform issuing genuine digital e-policies directly from authorized insurers.</p>
+        </div>
+
+        <div class="category-card" style="padding: 24px; border-radius: var(--radius-lg); border: 1px solid var(--border); background: var(--surface);">
+          <div style="font-size: 2rem; margin-bottom: 12px;">🏪</div>
+          <h4 style="color: var(--primary); font-size: 1.1rem; margin-bottom: 6px; font-weight: 700;">4,500+ Cashless Garages</h4>
+          <p class="text-xs text-secondary" style="line-height: 1.5;">Direct cashless settlement at authorized manufacturer workshops across all major Indian cities.</p>
+        </div>
+
+        <div class="category-card" style="padding: 24px; border-radius: var(--radius-lg); border: 1px solid var(--border); background: var(--surface);">
+          <div style="font-size: 2rem; margin-bottom: 12px;">🚫</div>
+          <h4 style="color: var(--primary); font-size: 1.1rem; margin-bottom: 6px; font-weight: 700;">Zero Spam Guarantee</h4>
+          <p class="text-xs text-secondary" style="line-height: 1.5;">Your contact details are strictly private. Enjoy self-serve policy comparison without telemarketing harassment.</p>
+        </div>
+
+        <div class="category-card" style="padding: 24px; border-radius: var(--radius-lg); border: 1px solid var(--border); background: var(--surface);">
+          <div style="font-size: 2rem; margin-bottom: 12px;">⚡</div>
+          <h4 style="color: var(--primary); font-size: 1.1rem; margin-bottom: 6px; font-weight: 700;">Instant Digital Renewal</h4>
+          <p class="text-xs text-secondary" style="line-height: 1.5;">Zero physical paperwork. Download your official tax invoice and policy certificate in under 2 minutes.</p>
+        </div>
+
+      </div>
+
+      <div class="text-center" style="margin-top: 32px;">
+        <a href="pages/about.html" class="btn btn-secondary font-semibold">Learn More About InsureDrive →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Claims Assistance (Enhanced with Visual Feature Cards & Progress Stepper) -->
+  <section class="section" style="background: var(--surface-alt);">
+    <div class="container" style="max-width: 960px;">
+      
+      <!-- Visual Feature Showcase Images -->
+      <div style="gap: var(--space-6); margin-bottom: var(--space-8);" class="feature-showcase-grid">
+        <div style="border-radius: var(--radius-lg); overflow: hidden; height: 200px; box-shadow: var(--shadow-md); border: 1px solid var(--border);">
+          <img src="assets/images/garage_cashless.png" alt="Cashless Garage Network" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+        </div>
+        <div style="border-radius: var(--radius-lg); overflow: hidden; height: 200px; box-shadow: var(--shadow-md); border: 1px solid var(--border);">
+          <img src="assets/images/car_inspection.png" alt="Digital Smartphone Inspection" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+        </div>
+      </div>
+
+      <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: var(--space-8); box-shadow: var(--shadow-sm);">
+        
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-6); flex-wrap: wrap; gap: var(--space-4);">
+          <div>
+            <h2 style="font-size: 1.75rem; color: var(--primary);">Need help with a claim?</h2>
+            <p class="text-sm text-secondary" style="margin-top: 2px;">Track active claims or initiate a paperless claim request online.</p>
+          </div>
+          <a href="pages/claims.html" class="btn btn-accent btn-lg" style="font-weight: 700;">Start a Claim →</a>
+        </div>
+
+        <!-- Sample Live Claim Stage Progress Bar -->
+        <div style="background: var(--surface-alt); border-radius: var(--radius-lg); padding: var(--space-6); border: 1px solid var(--border);">
+          <div style="display: flex; justify-content: space-between; margin-bottom: var(--space-3);" class="text-xs text-secondary font-semibold">
+            <span>Claim #CLM-2026-1024</span>
+            <span style="color: var(--accent); font-weight: 700;">Stage: Survey Completed</span>
+          </div>
+
+          <div class="claim-stepper-wrapper">
+            <div class="claim-stepper-inner" style="display: flex; align-items: center; justify-content: space-between; position: relative;">
+              <div style="position: absolute; top: 14px; left: 10%; right: 10%; height: 3px; background: var(--border); z-index: 1;"></div>
+              <div style="position: absolute; top: 14px; left: 10%; width: 50%; height: 3px; background: var(--accent); z-index: 1;"></div>
+
+              <div style="position: relative; z-index: 2; text-align: center;">
+                <div style="width: 30px; height: 30px; border-radius: 50%; background: var(--accent); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 700; margin: 0 auto 6px;">✓</div>
+                <span class="text-xs font-semibold" style="color: var(--primary);">Submitted</span>
+              </div>
+
+              <div style="position: relative; z-index: 2; text-align: center;">
+                <div style="width: 30px; height: 30px; border-radius: 50%; background: var(--accent); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 700; margin: 0 auto 6px;">✓</div>
+                <span class="text-xs font-semibold" style="color: var(--primary);">Under Review</span>
+              </div>
+
+              <div style="position: relative; z-index: 2; text-align: center;">
+                <div style="width: 30px; height: 30px; border-radius: 50%; background: var(--accent); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 700; margin: 0 auto 6px;">✓</div>
+                <span class="text-xs font-semibold" style="color: var(--accent);">Survey</span>
+              </div>
+
+              <div style="position: relative; z-index: 2; text-align: center;">
+                <div style="width: 30px; height: 30px; border-radius: 50%; background: var(--border); color: var(--text-muted); display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 700; margin: 0 auto 6px;">4</div>
+                <span class="text-xs text-muted">Approved</span>
+              </div>
+
+              <div style="position: relative; z-index: 2; text-align: center;">
+                <div style="width: 30px; height: 30px; border-radius: 50%; background: var(--border); color: var(--text-muted); display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 700; margin: 0 auto 6px;">5</div>
+                <span class="text-xs text-muted">Completed</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 7.5 BLOG & INSURANCE GUIDES SECTION -->
+  <section class="section" style="background: var(--surface);">
+    <div class="container">
+      <div class="section-header-flex">
+        <div>
+          <span class="section-tag" style="color: var(--accent);">InsureDrive Blog</span>
+          <h2 class="section-title">Latest Insurance Insights & Guides</h2>
+          <p class="section-description">Practical guides to help you maximize savings and navigate claims smoothly.</p>
+        </div>
+        <div class="carousel-nav-btns">
+          <button class="carousel-arrow-btn prev-btn" aria-label="Previous article">‹</button>
+          <button class="carousel-arrow-btn next-btn" aria-label="Next article">›</button>
+        </div>
+      </div>
+
+      <div class="blog-carousel-container">
+        <div class="blog-grid blog-carousel-track">
+        
+        <article class="widget-card" style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; box-shadow: var(--shadow-sm);">
+          <div>
+            <div style="height: 180px; overflow: hidden;">
+              <img src="assets/images/insurance_banner.jpg" alt="NCB Savings Guide" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div style="padding: 20px;">
+              <div class="text-xs text-muted" style="margin-bottom: 6px;">RENEWAL SAVINGS • 5 MIN READ</div>
+              <h3 style="font-size: 1.1rem; color: var(--primary); margin-bottom: 8px; font-weight: 700;">How to Transfer Your No Claim Bonus (NCB) & Save 50%</h3>
+              <p class="text-secondary text-xs" style="line-height: 1.5;">Learn IRDAI rules on retaining your NCB discount when switching insurance companies.</p>
+            </div>
+          </div>
+          <div style="padding: 0 20px 20px 20px;">
+            <a href="pages/blog.html" class="text-xs font-semibold" style="color: var(--accent);">Read Full Article →</a>
+          </div>
+        </article>
+
+        <article class="widget-card" style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; box-shadow: var(--shadow-sm);">
+          <div>
+            <div style="height: 180px; overflow: hidden;">
+              <img src="assets/images/suv_car.png" alt="SUV Insurance Guide" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div style="padding: 20px;">
+              <div class="text-xs text-muted" style="margin-bottom: 6px;">COVERAGE ADVICE • 4 MIN READ</div>
+              <h3 style="font-size: 1.1rem; color: var(--primary); margin-bottom: 8px; font-weight: 700;">Comprehensive Cover vs Third-Party: SUV Owner's Guide</h3>
+              <p class="text-secondary text-xs" style="line-height: 1.5;">Compare cost vs risk coverage for private cars, SUVs, and luxury sedans.</p>
+            </div>
+          </div>
+          <div style="padding: 0 20px 20px 20px;">
+            <a href="pages/blog.html" class="text-xs font-semibold" style="color: var(--accent);">Read Full Article →</a>
+          </div>
+        </article>
+
+        <article class="widget-card" style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; box-shadow: var(--shadow-sm);">
+          <div>
+            <div style="height: 180px; overflow: hidden;">
+              <img src="assets/images/garage_cashless.png" alt="Cashless Claim Guide" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div style="padding: 20px;">
+              <div class="text-xs text-muted" style="margin-bottom: 6px;">CLAIMS GUIDE • 6 MIN READ</div>
+              <h3 style="font-size: 1.1rem; color: var(--primary); margin-bottom: 8px; font-weight: 700;">Cashless Car Claims: 4 Steps to Zero Out-of-Pocket Expense</h3>
+              <p class="text-secondary text-xs" style="line-height: 1.5;">How to get your repair bill settled directly with workshop surveyors.</p>
+            </div>
+          </div>
+          <div style="padding: 0 20px 20px 20px;">
+            <a href="pages/blog.html" class="text-xs font-semibold" style="color: var(--accent);">Read Full Article →</a>
+          </div>
+        </article>
+
+      </div>
+      </div>
+
+      <div class="text-center" style="margin-top: 32px;">
+        <a href="pages/blog.html" class="btn btn-accent font-semibold">Explore All Blog Articles & Guides →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Final CTA -->
+  <section class="section cta-banner" style="background: #0F172A; color: #fff; padding: var(--space-12) 0;">
+    <div class="container text-center container-narrow">
+      <h2 style="font-size: 2.25rem; color: #fff; margin-bottom: var(--space-3); font-weight: 800;">Ready to check your car insurance?</h2>
+      <p style="color: #CBD5E1; font-size: 1.05rem; margin-bottom: var(--space-6); max-width: 540px; margin-left: auto; margin-right: auto;">
+        Compare quotes from verified insurers in seconds. Zero paperwork, clear coverage, and instant renewal.
+      </p>
+      <div class="cta-buttons flex justify-center gap-4 flex-wrap">
+        <a href="pages/compare.html" class="btn btn-accent btn-lg" style="font-weight: 700;">Compare Insurance Now →</a>
+        <a href="pages/login.html" class="btn btn-secondary btn-lg" style="background: rgba(255,255,255,0.1); color: #fff; border-color: rgba(255,255,255,0.2);">Customer Portal Login</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Footer -->
+  <footer class="footer" style="background: #0B1D2F; color: var(--text-muted); padding: var(--space-12) 0 var(--space-6) 0; border-top: 1px solid rgba(255,255,255,0.08);">
+    <div class="container">
+      <div class="footer-grid" style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: var(--space-8); margin-bottom: var(--space-8);">
+        <div>
+          <a href="index.html" class="brand-logo" style="color: #fff; margin-bottom: var(--space-3);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.2">
+              <path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-5.45 9-12V7l-9-5z"></path>
+            </svg>
+            Insure<span class="accent" style="color: var(--accent);">Drive</span>
+          </a>
+          <p style="color: #94A3B8; font-size: 0.875rem; line-height: 1.6; max-width: 320px;">
+            A transparent car insurance comparison and digital renewal platform for Indian vehicle owners.
+          </p>
+          <div class="text-xs text-muted" style="margin-top: 12px; color: #64748B;">IRDAI Web Aggregator Registered • 100% Secure</div>
+        </div>
+
+        <div>
+          <h4 style="color: #fff; font-size: 0.95rem; margin-bottom: var(--space-4);">Insurance</h4>
+          <ul class="footer-links" style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.875rem;">
+            <li><a href="pages/insurance-plans.html" style="color: #94A3B8;">Comprehensive Cover</a></li>
+            <li><a href="pages/insurance-plans.html" style="color: #94A3B8;">Third Party Cover</a></li>
+            <li><a href="pages/compare.html" style="color: #94A3B8;">Compare Quotes</a></li>
+            <li><a href="pages/quote.html" style="color: #94A3B8;">Renew Insurance</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="color: #fff; font-size: 0.95rem; margin-bottom: var(--space-4);">Company</h4>
+          <ul class="footer-links" style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.875rem;">
+            <li><a href="pages/about.html" style="color: #94A3B8;">About Us</a></li>
+            <li><a href="pages/how-it-works.html" style="color: #94A3B8;">How It Works</a></li>
+            <li><a href="pages/blog.html" style="color: #94A3B8;">Blog & Guides</a></li>
+            <li><a href="pages/claims.html" style="color: #94A3B8;">Cashless Claims</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="color: #fff; font-size: 0.95rem; margin-bottom: var(--space-4);">Support & Legal</h4>
+          <ul class="footer-links" style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.875rem;">
+            <li><a href="pages/contact.html" style="color: #94A3B8;">Contact Support</a></li>
+            <li><a href="pages/privacy.html" style="color: #94A3B8;">Privacy Policy</a></li>
+            <li><a href="pages/terms.html" style="color: #94A3B8;">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom" style="padding-top: var(--space-6); border-top: 1px solid rgba(255,255,255,0.08); display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: #64748B;">
+        <div>© 2026 InsureDrive Financial Technologies Ltd. All rights reserved.</div>
+        <div>Designed for trust & clarity</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/quote.js"></script>
+</body>
+</html>

@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login & Client Access — InsureDrive</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+</head>
+<body>
+
+  <!-- Glassmorphic Header Navigation Bar -->
+  <header class="navbar">
+    <div class="container">
+      <a href="../index.html" class="brand-logo-lux">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.2">
+          <path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-5.45 9-12V7l-9-5z"></path>
+          <path d="M12 8v8M8 12h8" stroke-linecap="round"></path>
+        </svg>
+        <div>
+          <span>Insure<span style="color: #2563EB;">Drive</span></span>
+          <span class="logo-subtext">AUTOMOTIVE FINTECH</span>
+        </div>
+      </a>
+
+      <!-- Centered Spaced Navigation Links -->
+      <nav class="desktop-nav">
+        <ul class="nav-links-lux">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../home2.html">Home 2</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="compare.html">Services</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right Header Actions (Image 2 & 3) -->
+      <div class="nav-actions-lux">
+        <!-- Theme Toggle -->
+        <button class="icon-btn-circle theme-toggle" title="Toggle Theme" aria-label="Toggle Theme">
+          <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+        </button>
+
+        <!-- RTL Toggle Pill -->
+        <button class="btn-rtl-pill rtl-toggle" title="Toggle Direction">RTL</button>
+
+        <!-- Profile Icon Dropdown Trigger -->
+        <div class="portal-dropdown-wrapper">
+          <button class="icon-btn-circle profile-menu-toggle" title="Account Portals" aria-label="Account Portals">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </button>
+
+          <!-- Portals Popover Menu (Image 2) -->
+          <div class="portal-dropdown" id="portalPopover">
+            <div class="portal-dropdown-header">
+              <h4 class="portal-dropdown-title">InsureDrive Portals</h4>
+              <p class="portal-dropdown-subtitle">Customer & Management Access</p>
+            </div>
+            <ul class="portal-menu-list">
+              <li class="portal-menu-item">
+                <a href="login.html">
+                  <span class="portal-menu-icon">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3"/></svg>
+                  </span>
+                  Login
+                </a>
+              </li>
+              <li class="portal-menu-item">
+                <a href="quote.html">
+                  <span class="portal-menu-icon">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="17" y1="11" x2="23" y2="11"/></svg>
+                  </span>
+                  Signup / Get Quote
+                </a>
+              </li>
+              <li class="portal-menu-item">
+                <a href="../dashboard/index.html">
+                  <span class="portal-menu-icon">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                  </span>
+                  User Dashboard
+                </a>
+              </li>
+              <li class="portal-menu-item">
+                <a href="../admin/index.html">
+                  <span class="portal-menu-icon">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  </span>
+                  Admin Dashboard
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Mobile Drawer Toggle -->
+        <button class="mobile-nav-toggle" aria-label="Open Menu" style="margin-left: 4px;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Harmonized Split Login Container -->
+  <main class="login-page-wrapper">
+    <div class="login-split-card">
+      
+      <!-- Left Hero Panel (Slate & Cobalt Card) -->
+      <div class="login-hero-side">
+        <div>
+          <!-- Brand Logo Header inside card -->
+          <div class="login-hero-brand">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.2">
+              <path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-5.45 9-12V7l-9-5z"></path>
+              <path d="M12 8v8M8 12h8" stroke-linecap="round"></path>
+            </svg>
+            <div>
+              <div class="brand-text">InsureDrive</div>
+              <span class="brand-sub">FINTECH & POLICY SUITE</span>
+            </div>
+          </div>
+
+          <div class="login-hero-content">
+            <h1 class="login-hero-title">Smart Car Protection Managed Seamlessly.</h1>
+            <p class="login-hero-desc">Access active policy schedules, digital ID cards, zero-paperwork claims, and instant multi-insurer quote comparisons.</p>
+            
+            <div class="login-feature-list">
+              <div class="login-feature-item">
+                <div class="login-feature-icon">
+                  <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                </div>
+                <span class="login-feature-text">Zero-Paperwork Digital Claims</span>
+              </div>
+
+              <div class="login-feature-item">
+                <div class="login-feature-icon">
+                  <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+                </div>
+                <span class="login-feature-text">24/7 Emergency RSA & Support</span>
+              </div>
+
+              <div class="login-feature-item">
+                <div class="login-feature-icon">
+                  <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                </div>
+                <span class="login-feature-text">Instant Multi-Insurer Live Rates</span>
+              </div>
+            </div>
+
+            <!-- Stats Strip -->
+            <div class="login-stats-strip">
+              <div>
+                <div class="login-stat-val">99.4%</div>
+                <div class="login-stat-lbl">Claim Approval</div>
+              </div>
+              <div>
+                <div class="login-stat-val">4.9★</div>
+                <div class="login-stat-lbl">User Rating</div>
+              </div>
+              <div>
+                <div class="login-stat-val">&lt; 2 Min</div>
+                <div class="login-stat-lbl">Fast Renewal</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Form Panel -->
+      <div class="login-form-side">
+        
+        <!-- Top Auth Tabs -->
+        <div class="auth-tabs-header">
+          <button type="button" class="auth-tab-btn active" id="signInTabBtn">Sign In</button>
+          <button type="button" class="auth-tab-btn" id="createAccountTabBtn">Create Account</button>
+        </div>
+
+        <!-- Welcome Title -->
+        <h2 class="login-welcome-title" id="formTitleText">Welcome back!</h2>
+
+        <!-- Quick Demo Switcher (Visible in Sign In mode) -->
+        <div id="demoSwitcherBox" style="background: var(--surface-alt, #F1F5F9); padding: 6px 10px; border-radius: 12px; margin-bottom: 20px; border: 1px solid var(--border, #E2E8F0); display: flex; gap: 8px;">
+          <button type="button" class="btn btn-secondary btn-sm flex-1" id="fillCustomerBtn" style="font-size: 0.78rem; font-weight:700;">Customer Demo</button>
+          <button type="button" class="btn btn-secondary btn-sm flex-1" id="fillAdminBtn" style="font-size: 0.78rem; font-weight:700;">Admin Demo</button>
+        </div>
+
+        <form id="loginForm">
+          <!-- Full Name Field (Create Account mode only) -->
+          <div class="form-group" id="fullNameGroup" style="margin-bottom: 16px; display: none;">
+            <div class="field-label-row">
+              <label class="form-label-uppercase" for="fullNameInput">FULL NAME</label>
+            </div>
+            <input type="text" id="fullNameInput" class="form-input-lux" placeholder="e.g. Rahul Sharma">
+          </div>
+
+          <!-- Email / Username Field -->
+          <div class="form-group" style="margin-bottom: 16px;">
+            <div class="field-label-row">
+              <label class="form-label-uppercase" id="emailLabelText" for="emailInput">EMAIL OR MOBILE NUMBER</label>
+            </div>
+            <input type="text" id="emailInput" class="form-input-lux" placeholder="customer@insuredrive.demo" value="customer@insuredrive.demo" required>
+          </div>
+
+          <!-- Phone Number Field (Create Account mode only) -->
+          <div class="form-group" id="phoneGroup" style="margin-bottom: 16px; display: none;">
+            <div class="field-label-row">
+              <label class="form-label-uppercase" for="phoneInput">PHONE NUMBER</label>
+            </div>
+            <input type="tel" id="phoneInput" class="form-input-lux" placeholder="e.g. +91 98765 43210">
+          </div>
+
+          <!-- Password Field -->
+          <div class="form-group" style="margin-bottom: 16px;">
+            <div class="field-label-row">
+              <label class="form-label-uppercase" for="passwordInput">PASSWORD</label>
+              <a href="#" class="forgot-pass-link" id="forgotPassLink" onclick="event.preventDefault(); showToast('Password reset link sent to registered email.', 'info');">Forgot Password?</a>
+            </div>
+            <input type="password" id="passwordInput" class="form-input-lux" value="demo1234" required>
+          </div>
+
+          <!-- Confirm Password Field (Create Account mode only) -->
+          <div class="form-group" id="confirmPasswordGroup" style="margin-bottom: 16px; display: none;">
+            <div class="field-label-row">
+              <label class="form-label-uppercase" for="confirmPasswordInput">CONFIRM PASSWORD</label>
+            </div>
+            <input type="password" id="confirmPasswordInput" class="form-input-lux" placeholder="Re-enter password">
+          </div>
+
+          <div class="checkbox-row" style="margin: 12px 0 20px 0;">
+            <input type="checkbox" id="rememberMe" checked>
+            <label for="rememberMe" id="checkboxLabel" style="cursor: pointer;">Remember me</label>
+          </div>
+
+          <button type="submit" class="btn-login-gradient" id="submitBtn">
+            LOG IN TO PORTAL <span style="font-size: 1.1rem;">→</span>
+          </button>
+        </form>
+
+        <div class="social-divider">
+          <span>OR SIGN IN WITH</span>
+        </div>
+
+        <!-- Google Only Button -->
+        <div style="margin-bottom: 24px;">
+          <button type="button" class="btn-social" style="width: 100%; padding: 12px; font-weight: 700; font-size: 0.92rem; border-radius: 12px; gap: 10px;" onclick="showToast('Signing in with Google...', 'info'); setTimeout(() => window.location.href='../dashboard/index.html', 700);">
+            <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+            Sign in with Google
+          </button>
+        </div>
+
+        <div class="bottom-auth-footer" id="footerToggleText">
+          New to InsureDrive? <a href="#" id="toggleAccountLink">CREATE ACCOUNT →</a>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <footer style="padding: 24px 0; text-align: center; font-size: 0.82rem; color: var(--text-muted); border-top: 1px solid var(--border); background: var(--surface);">
+    © 2026 InsureDrive Financial Technologies Ltd. All rights reserved.
+  </footer>
+
+  <script src="../assets/js/data.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script>
+    const fillCustomer = document.getElementById('fillCustomerBtn');
+    const fillAdmin = document.getElementById('fillAdminBtn');
+    const emailInput = document.getElementById('emailInput');
+    const passwordInput = document.getElementById('passwordInput');
+    const fullNameInput = document.getElementById('fullNameInput');
+    const phoneInput = document.getElementById('phoneInput');
+    const confirmPasswordInput = document.getElementById('confirmPasswordInput');
+    const fullNameGroup = document.getElementById('fullNameGroup');
+    const phoneGroup = document.getElementById('phoneGroup');
+    const confirmPasswordGroup = document.getElementById('confirmPasswordGroup');
+    const forgotPassLink = document.getElementById('forgotPassLink');
+    const demoSwitcherBox = document.getElementById('demoSwitcherBox');
+    const emailLabelText = document.getElementById('emailLabelText');
+    const checkboxLabel = document.getElementById('checkboxLabel');
+
+    const loginForm = document.getElementById('loginForm');
+    const signInTab = document.getElementById('signInTabBtn');
+    const createAccountTab = document.getElementById('createAccountTabBtn');
+    const formTitle = document.getElementById('formTitleText');
+    const submitBtn = document.getElementById('submitBtn');
+    const footerToggleText = document.getElementById('footerToggleText');
+
+    let currentMode = 'signin';
+
+    function setMode(mode) {
+      currentMode = mode;
+      if (mode === 'signin') {
+        signInTab.classList.add('active');
+        createAccountTab.classList.remove('active');
+        formTitle.textContent = 'Welcome back!';
+        emailLabelText.textContent = 'EMAIL OR MOBILE NUMBER';
+        emailInput.placeholder = 'customer@insuredrive.demo';
+        
+        // Hide Signup-only fields
+        fullNameGroup.style.display = 'none';
+        phoneGroup.style.display = 'none';
+        confirmPasswordGroup.style.display = 'none';
+        forgotPassLink.style.display = 'inline';
+        demoSwitcherBox.style.display = 'flex';
+
+        fullNameInput.removeAttribute('required');
+        phoneInput.removeAttribute('required');
+        confirmPasswordInput.removeAttribute('required');
+
+        checkboxLabel.textContent = 'Remember me';
+        submitBtn.innerHTML = 'LOG IN TO PORTAL <span style="font-size: 1.1rem;">→</span>';
+        footerToggleText.innerHTML = 'New to InsureDrive? <a href="#" id="toggleAccountLink">CREATE ACCOUNT →</a>';
+      } else {
+        createAccountTab.classList.add('active');
+        signInTab.classList.remove('active');
+        formTitle.textContent = 'Create InsureDrive Account';
+        emailLabelText.textContent = 'EMAIL ADDRESS';
+        emailInput.placeholder = 'e.g. rahul@example.com';
+        if (emailInput.value === 'customer@insuredrive.demo' || emailInput.value === 'admin@insuredrive.demo') {
+          emailInput.value = '';
+          passwordInput.value = '';
+        }
+        
+        // Show Signup fields: Name, Phone, Confirm Password
+        fullNameGroup.style.display = 'block';
+        phoneGroup.style.display = 'block';
+        confirmPasswordGroup.style.display = 'block';
+        forgotPassLink.style.display = 'none';
+        demoSwitcherBox.style.display = 'none';
+
+        fullNameInput.setAttribute('required', 'true');
+        phoneInput.setAttribute('required', 'true');
+        confirmPasswordInput.setAttribute('required', 'true');
+
+        checkboxLabel.textContent = 'I agree to Terms & Conditions and Privacy Policy';
+        submitBtn.innerHTML = 'CREATE ACCOUNT <span style="font-size: 1.1rem;">→</span>';
+        footerToggleText.innerHTML = 'Already have an account? <a href="#" id="toggleAccountLink">SIGN IN →</a>';
+      }
+      
+      const newLink = document.getElementById('toggleAccountLink');
+      if (newLink) {
+        newLink.addEventListener('click', (e) => {
+          e.preventDefault();
+          setMode(currentMode === 'signin' ? 'signup' : 'signin');
+        });
+      }
+    }
+
+    signInTab.addEventListener('click', () => setMode('signin'));
+    createAccountTab.addEventListener('click', () => setMode('signup'));
+
+    const toggleLink = document.getElementById('toggleAccountLink');
+    if (toggleLink) {
+      toggleLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        setMode('signup');
+      });
+    }
+
+    fillCustomer.addEventListener('click', () => {
+      emailInput.value = 'customer@insuredrive.demo';
+      passwordInput.value = 'demo1234';
+      showToast('Filled customer credentials', 'info');
+    });
+
+    fillAdmin.addEventListener('click', () => {
+      emailInput.value = 'admin@insuredrive.demo';
+      passwordInput.value = 'admin1234';
+      showToast('Filled admin credentials', 'info');
+    });
+
+    loginForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const emailOrPhone = emailInput.value.trim().toLowerCase();
+      const password = passwordInput.value;
+
+      if (currentMode === 'signup') {
+        const fullName = fullNameInput.value.trim();
+        const phone = phoneInput.value.trim();
+        const confirmPassword = confirmPasswordInput.value;
+
+        if (!fullName) {
+          showToast('Please enter your full name', 'warning');
+          return;
+        }
+        if (!phone) {
+          showToast('Please enter your phone number', 'warning');
+          return;
+        }
+        if (password !== confirmPassword) {
+          showToast('Passwords do not match! Please check again.', 'danger');
+          return;
+        }
+
+        // Save new user account to localStorage
+        const storedUsers = JSON.parse(localStorage.getItem('insuredrive_users') || '[]');
+        const existingIndex = storedUsers.findIndex(u => u.email === emailOrPhone || u.phone === phone);
+
+        const newUserObj = {
+          name: fullName,
+          email: emailOrPhone,
+          phone: phone,
+          password: password,
+          role: 'customer'
+        };
+
+        if (existingIndex >= 0) {
+          storedUsers[existingIndex] = newUserObj;
+        } else {
+          storedUsers.push(newUserObj);
+        }
+
+        localStorage.setItem('insuredrive_users', JSON.stringify(storedUsers));
+        showToast('Account created successfully! Switching to Sign In...', 'success');
+
+        // Automatically switch to Sign In and fill the new credentials!
+        setTimeout(() => {
+          setMode('signin');
+          emailInput.value = emailOrPhone;
+          passwordInput.value = password;
+          showToast('Enter your password to sign in now', 'info');
+        }, 800);
+
+        return;
+      }
+
+      // SIGN IN MODE
+      // 1. Check default demo accounts
+      if (emailOrPhone === 'customer@insuredrive.demo' && password === 'demo1234') {
+        localStorage.setItem('insuredrive_user', JSON.stringify({ name: 'Customer Demo User', email: emailOrPhone, role: 'customer' }));
+        showToast('Logging into Customer Portal...', 'success');
+        setTimeout(() => window.location.href = '../dashboard/index.html', 600);
+        return;
+      }
+
+      if (emailOrPhone === 'admin@insuredrive.demo' && password === 'admin1234') {
+        localStorage.setItem('insuredrive_user', JSON.stringify({ name: 'System Administrator', email: emailOrPhone, role: 'admin' }));
+        showToast('Authenticating Admin Operator...', 'success');
+        setTimeout(() => window.location.href = '../admin/index.html', 600);
+        return;
+      }
+
+      // 2. Check dynamically created users in localStorage
+      const storedUsers = JSON.parse(localStorage.getItem('insuredrive_users') || '[]');
+      const matchedUser = storedUsers.find(u => (u.email === emailOrPhone || u.phone === emailOrPhone));
+
+      if (matchedUser) {
+        if (matchedUser.password === password) {
+          localStorage.setItem('insuredrive_user', JSON.stringify(matchedUser));
+          showToast(`Welcome back, ${matchedUser.name}! Logging in...`, 'success');
+          setTimeout(() => window.location.href = '../dashboard/index.html', 600);
+        } else {
+          showToast('Incorrect password! Please try again.', 'danger');
+        }
+      } else {
+        // Fallback for demo flexibility or new email
+        if (emailOrPhone.includes('admin')) {
+          showToast('Authenticating Admin Operator...', 'success');
+          setTimeout(() => window.location.href = '../admin/index.html', 600);
+        } else {
+          // Store user and allow login if user just typed
+          const fallbackUser = { name: emailOrPhone.split('@')[0] || 'Client User', email: emailOrPhone, role: 'customer' };
+          localStorage.setItem('insuredrive_user', JSON.stringify(fallbackUser));
+          showToast('Authenticated successfully! Entering Portal...', 'success');
+          setTimeout(() => window.location.href = '../dashboard/index.html', 600);
+        }
+      }
+    });
+  </script>
+</body>
+</html>
