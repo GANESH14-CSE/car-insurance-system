@@ -221,7 +221,7 @@ a {
   .nav-links-lux {
     display: flex !important;
     align-items: center !important;
-    gap: 2.25rem !important;
+    gap: 1.25rem !important;
     list-style: none !important;
     margin: 0 !important;
     padding: 0 !important;
@@ -364,6 +364,21 @@ a {
 
   .container {
     max-width: 960px;
+  }
+
+  .nav-links,
+  .nav-links-lux {
+    gap: 0.85rem !important;
+  }
+
+  .nav-links a,
+  .nav-links-lux a {
+    font-size: 0.875rem !important;
+    padding: 6px 2px !important;
+  }
+
+  .brand-logo-lux {
+    font-size: 1.15rem !important;
   }
 }
 
@@ -2659,5 +2674,24 @@ a {
     font-weight: 700 !important;
     color: var(--text-primary, #0F172A) !important;
     cursor: pointer !important;
+  }
+}
+
+/* Global Service & Public Page Responsiveness */
+@media (max-width: 991px) {
+  .hero-grid,
+  .detail-hero-grid,
+  .detail-main-grid,
+  .detail-benefits-grid,
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-grid > div,
+  .detail-hero-grid > div {
+    width: 100% !important;
   }
 }

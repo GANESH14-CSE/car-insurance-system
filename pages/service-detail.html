@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Details — InsureDrive Car Insurance</title>
+  <meta name="description" content="In-depth breakdown of InsureDrive car insurance services, coverage inclusions, exclusions, and claim process.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <style>
+    .detail-hero-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: var(--space-8);
+      align-items: center;
+    }
+    .detail-hero-img-wrap {
+      height: 220px;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--border);
+    }
+    .detail-main-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: var(--space-8);
+    }
+    .detail-benefits-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-6);
+    }
+
+    #detailTitle {
+      font-size: 2.5rem;
+    }
+
+    @media (max-width: 991px) {
+      .detail-hero-grid,
+      .detail-main-grid,
+      .detail-benefits-grid {
+        grid-template-columns: 1fr !important;
+        gap: var(--space-6) !important;
+      }
+      #detailTitle {
+        font-size: 1.85rem !important;
+      }
+      .detail-hero-img-wrap {
+        height: 180px !important;
+      }
+    }
+
+    @media (max-width: 576px) {
+      #detailTitle {
+        font-size: 1.5rem !important;
+      }
+      .detail-hero-img-wrap {
+        height: 160px !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container">
+      <a href="../index.html" class="brand-logo-lux">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.2">
+          <path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-5.45 9-12V7l-9-5z"></path>
+          <path d="M12 8v8M8 12h8" stroke-linecap="round"></path>
+        </svg>
+        <div>
+          <span>Insure<span style="color: #2563EB;">Drive</span></span>
+          <span class="logo-subtext">AUTOMOTIVE FINTECH</span>
+        </div>
+      </a>
+
+      <!-- Centered Navigation Links -->
+      <nav class="desktop-nav">
+        <ul class="nav-links-lux">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../home2.html">Home 2</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html" class="active">Services</a></li>
+          <li><a href="compare.html">Compare Quotes</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right Header Actions -->
+      <div class="nav-actions-lux">
+        <button class="icon-btn-circle theme-toggle" title="Toggle Theme" aria-label="Toggle Theme">
+          <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+        </button>
+
+        <button class="btn-rtl-pill rtl-toggle" title="Toggle Direction">RTL</button>
+
+        <div class="portal-dropdown-wrapper">
+          <button class="icon-btn-circle profile-menu-toggle" title="Account Portals" aria-label="Account Portals">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </button>
+
+          <div class="portal-dropdown">
+            <div class="portal-dropdown-header">
+              <h4 class="portal-dropdown-title">InsureDrive Portals</h4>
+              <p class="portal-dropdown-subtitle">Customer & Management Access</p>
+            </div>
+            <ul class="portal-menu-list">
+              <li class="portal-menu-item">
+                <a href="login.html">
+                  <span class="portal-menu-icon">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3"/></svg>
+                  </span>
+                  <div>
+                    <div class="portal-menu-title">Sign In / Register</div>
+                    <div class="portal-menu-desc">Access customer dashboard</div>
+                  </div>
+                </a>
+              </li>
+              <li class="portal-menu-item">
+                <a href="../dashboard/index.html">
+                  <span class="portal-menu-icon">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                  </span>
+                  <div>
+                    <div class="portal-menu-title">Customer Dashboard</div>
+                    <div class="portal-menu-desc">Manage active policies</div>
+                  </div>
+                </a>
+              </li>
+              <li class="portal-menu-item">
+                <a href="../admin/index.html">
+                  <span class="portal-menu-icon">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  </span>
+                  <div>
+                    <div class="portal-menu-title">Admin Console</div>
+                    <div class="portal-menu-desc">InsureDrive management portal</div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <button class="mobile-nav-toggle" aria-label="Open Menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumbs & Service Header -->
+  <section style="background: var(--surface-alt); padding: var(--space-6) 0; border-bottom: 1px solid var(--border);">
+    <div class="container">
+      <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 8px;">
+        <a href="../index.html" style="color: var(--text-secondary);">Home</a> &nbsp;›&nbsp; 
+        <a href="services.html" style="color: var(--text-secondary);">Services</a> &nbsp;›&nbsp; 
+        <span id="breadcrumbTitle" style="color: var(--accent); font-weight: 600;">Service Details</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hero Header Banner for Service -->
+  <section class="hero" style="padding: var(--space-8) 0; background: linear-gradient(180deg, #F0F4F8 0%, var(--background) 100%);">
+    <div class="container">
+      <div class="hero-grid detail-hero-grid">
+        <div>
+          <span id="detailBadge" class="badge badge-success" style="margin-bottom: var(--space-3); font-size: 0.8rem; padding: 0.35rem 0.85rem; font-weight: 700;">SERVICE COVERAGE</span>
+          <h1 id="detailTitle" style="color: var(--primary); margin-bottom: var(--space-3); font-weight: 800; line-height: 1.2;">
+            Service Title Loading...
+          </h1>
+          <p id="detailTagline" style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.6; max-width: 680px; margin-bottom: var(--space-6);">
+            Loading full coverage details and service parameters...
+          </p>
+          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+            <a id="detailCtaTop" href="compare.html" class="btn btn-accent btn-lg font-semibold">Get Instant Quote →</a>
+            <a href="services.html" class="btn btn-secondary btn-lg font-semibold">← Back to All Services</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="detail-hero-img-wrap">
+            <img id="detailHeroImg" src="../assets/images/suv_car.png" alt="Service Cover Preview" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Details Body Grid -->
+  <section class="section" style="background: var(--surface);">
+    <div class="container">
+      <div class="detail-main-grid">
+        
+        <!-- Left Content Area -->
+        <div style="display: flex; flex-direction: column; gap: var(--space-8);">
+          
+          <!-- Detailed Description Card -->
+          <div style="background: var(--surface-alt); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: var(--space-8);">
+            <h3 style="font-size: 1.35rem; color: var(--primary); margin-bottom: var(--space-3); font-weight: 700; display: flex; align-items: center; gap: 8px;">
+              <span>📌 In-Depth Service Overview</span>
+            </h3>
+            <p id="detailFullDesc" class="text-secondary" style="line-height: 1.8; font-size: 1rem;"></p>
+          </div>
+
+          <!-- Benefits vs Exclusions Section -->
+          <div class="detail-benefits-grid">
+            
+            <!-- What is Covered -->
+            <div style="background: #F0FDF4; border: 1px solid #BBF7D0; border-radius: var(--radius-xl); padding: var(--space-6);">
+              <h4 style="color: #166534; font-size: 1.1rem; margin-bottom: var(--space-4); font-weight: 700;">
+                ✅ What is Covered
+              </h4>
+              <ul id="detailCoveredUl" style="list-style: none; display: flex; flex-direction: column; gap: 12px;" class="text-sm text-secondary"></ul>
+            </div>
+
+            <!-- What is Excluded -->
+            <div style="background: #FEF2F2; border: 1px solid #FECACA; border-radius: var(--radius-xl); padding: var(--space-6);">
+              <h4 style="color: #991B1B; font-size: 1.1rem; margin-bottom: var(--space-4); font-weight: 700;">
+                ❌ What is Excluded
+              </h4>
+              <ul id="detailExcludedUl" style="list-style: none; display: flex; flex-direction: column; gap: 12px;" class="text-sm text-secondary"></ul>
+            </div>
+
+          </div>
+
+          <!-- Recommendation Box -->
+          <div style="background: var(--surface-alt); border-left: 4px solid var(--accent); border-radius: var(--radius-lg); padding: var(--space-6); border-top: 1px solid var(--border); border-right: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+            <h4 style="color: var(--primary); font-size: 1.1rem; margin-bottom: 6px; font-weight: 700;">💡 Who Should Choose This Service?</h4>
+            <p id="detailRecommendation" class="text-secondary" style="line-height: 1.7; font-size: 0.95rem;"></p>
+          </div>
+
+          <!-- 4-Step Claim Settlement Process -->
+          <div style="background: var(--surface-alt); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: var(--space-8);">
+            <h3 style="font-size: 1.35rem; color: var(--primary); margin-bottom: var(--space-6); font-weight: 700;">
+              ⚙️ How Claim & Service Activation Works
+            </h3>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: var(--space-4);">
+              <div style="background: var(--surface); padding: var(--space-4); border-radius: var(--radius-lg); border: 1px solid var(--border);">
+                <div style="color: var(--accent); font-weight: 800; font-size: 1.25rem; margin-bottom: 4px;">01</div>
+                <strong style="color: var(--primary); display: block; font-size: 0.85rem; margin-bottom: 4px;">Intimate Claim</strong>
+                <span class="text-xs text-secondary">File request on dashboard or app</span>
+              </div>
+
+              <div style="background: var(--surface); padding: var(--space-4); border-radius: var(--radius-lg); border: 1px solid var(--border);">
+                <div style="color: var(--accent); font-weight: 800; font-size: 1.25rem; margin-bottom: 4px;">02</div>
+                <strong style="color: var(--primary); display: block; font-size: 0.85rem; margin-bottom: 4px;">Video Inspection</strong>
+                <span class="text-xs text-secondary">Upload car photo/video on smartphone</span>
+              </div>
+
+              <div style="background: var(--surface); padding: var(--space-4); border-radius: var(--radius-lg); border: 1px solid var(--border);">
+                <div style="color: var(--accent); font-weight: 800; font-size: 1.25rem; margin-bottom: 4px;">03</div>
+                <strong style="color: var(--primary); display: block; font-size: 0.85rem; margin-bottom: 4px;">Garage Repair</strong>
+                <span class="text-xs text-secondary">Vehicle repaired at network workshop</span>
+              </div>
+
+              <div style="background: var(--surface); padding: var(--space-4); border-radius: var(--radius-lg); border: 1px solid var(--border);">
+                <div style="color: var(--accent); font-weight: 800; font-size: 1.25rem; margin-bottom: 4px;">04</div>
+                <strong style="color: var(--primary); display: block; font-size: 0.85rem; margin-bottom: 4px;">Cashless Payout</strong>
+                <span class="text-xs text-secondary">Direct bill settlement with workshop</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Side Sticky Quick Summary Box -->
+        <div>
+          <div style="position: sticky; top: 100px; background: var(--surface-alt); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: var(--space-6); box-shadow: var(--shadow-md); display: flex; flex-direction: column; gap: var(--space-5);">
+            
+            <div>
+              <span class="badge badge-success" style="font-size: 0.75rem; margin-bottom: 6px;">RECOMMENDED PLAN</span>
+              <h4 style="font-size: 1.25rem; color: var(--primary); font-weight: 700;" id="sideSummaryTitle">Quick Service Summary</h4>
+              <p class="text-xs text-secondary" style="margin-top: 4px;">Verified IRDAI Compliant Plan</p>
+            </div>
+
+            <div style="background: var(--surface); padding: var(--space-4); border-radius: var(--radius-lg); border: 1px solid var(--border);">
+              <div class="text-xs text-muted" style="margin-bottom: 2px;">Starting Premium Rate</div>
+              <div style="font-size: 1.75rem; font-weight: 800; color: var(--accent);" id="sideStartingRate">₹2,094 / yr</div>
+              <div class="text-xs text-secondary" style="margin-top: 2px;">Includes Tax & IRDAI Tariff</div>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+              <a id="detailCtaSide" href="compare.html" class="btn btn-accent w-full text-center font-semibold">Compare Quotes for Plan →</a>
+              <a href="contact.html" class="btn btn-secondary w-full text-center font-semibold">Talk to Insurance Specialist</a>
+            </div>
+
+            <div style="font-size: 0.8rem; color: var(--text-muted); display: flex; flex-direction: column; gap: 6px; padding-top: var(--space-4); border-top: 1px solid var(--border);">
+              <div>✓ Instant Digital Renewal</div>
+              <div>✓ 4,500+ Cashless Workshops</div>
+              <div>✓ 100% Paperless Process</div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" style="background: #0B1D2F; color: var(--text-muted); padding: var(--space-12) 0 var(--space-6) 0; border-top: 1px solid rgba(255,255,255,0.08);">
+    <div class="container">
+      <div class="footer-grid" style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: var(--space-8); margin-bottom: var(--space-8);">
+        <div>
+          <a href="../index.html" class="brand-logo" style="color: #fff; margin-bottom: var(--space-3);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.2">
+              <path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-5.45 9-12V7l-9-5z"></path>
+            </svg>
+            Insure<span class="accent" style="color: var(--accent);">Drive</span>
+          </a>
+          <p style="color: #94A3B8; font-size: 0.875rem; line-height: 1.6; max-width: 320px;">
+            A transparent car insurance comparison and digital renewal platform for Indian vehicle owners.
+          </p>
+          <div class="text-xs text-muted" style="margin-top: 12px; color: #64748B;">IRDAI Web Aggregator Registered • 100% Secure</div>
+        </div>
+
+        <div>
+          <h4 style="color: #fff; font-size: 0.95rem; margin-bottom: var(--space-4);">Services</h4>
+          <ul class="footer-links" style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.875rem;">
+            <li><a href="services.html" style="color: #94A3B8;">Comprehensive Cover</a></li>
+            <li><a href="services.html" style="color: #94A3B8;">Third Party Cover</a></li>
+            <li><a href="compare.html" style="color: #94A3B8;">Compare Quotes</a></li>
+            <li><a href="quote.html" style="color: #94A3B8;">Renew Policy</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="color: #fff; font-size: 0.95rem; margin-bottom: var(--space-4);">Company</h4>
+          <ul class="footer-links" style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.875rem;">
+            <li><a href="about.html" style="color: #94A3B8;">About Us</a></li>
+            <li><a href="how-it-works.html" style="color: #94A3B8;">How It Works</a></li>
+            <li><a href="blog.html" style="color: #94A3B8;">Blog & Guides</a></li>
+            <li><a href="claims.html" style="color: #94A3B8;">Cashless Claims</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="color: #fff; font-size: 0.95rem; margin-bottom: var(--space-4);">Support & Legal</h4>
+          <ul class="footer-links" style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.875rem;">
+            <li><a href="contact.html" style="color: #94A3B8;">Contact Support</a></li>
+            <li><a href="privacy.html" style="color: #94A3B8;">Privacy Policy</a></li>
+            <li><a href="terms.html" style="color: #94A3B8;">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom" style="padding-top: var(--space-6); border-top: 1px solid rgba(255,255,255,0.08); display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: #64748B;">
+        <div>© 2026 InsureDrive Financial Technologies Ltd. All rights reserved.</div>
+        <div>Designed for trust & clarity</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/data.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const servicesData = {
+        comprehensive: {
+          badge: '01 • ALL-ROUND COVER',
+          title: 'Comprehensive Car Insurance Service',
+          tagline: 'Full end-to-end protection against accidental damages, theft, fire, and third-party legal liabilities.',
+          desc: 'Comprehensive Car Insurance is the complete protection package for car owners in India. It covers Own Damage (OD) caused to your car due to accidental collisions, roll-overs, parking incidents, theft, vandalism, and natural disasters (floods, cyclones, earthquakes, storms). Additionally, it fulfills your legal obligations by providing unlimited Third-Party Personal Injury liability and up to ₹7.5 Lakhs Third-Party Property Damage cover.',
+          img: '../assets/images/suv_car.png',
+          rate: '₹5,490 / yr',
+          covered: [
+            'Accidental damage & collision repair costs at 4,500+ cashless garages',
+            'Total loss or vehicle theft replacement cover',
+            'Natural disaster damage (Floods, Cyclones, Storms, Earthquakes)',
+            'Fire, self-ignition & explosion coverage',
+            'Third-party property & bodily injury legal liability',
+            'Customizable add-on riders (Zero Dep, Engine Protect, RSA)'
+          ],
+          excluded: [
+            'Normal wear and tear due to vehicle age',
+            'Driving without a valid Driving License',
+            'Driving under the influence of alcohol or drugs',
+            'Electrical/mechanical breakdown without collision accident'
+          ],
+          recommendation: 'Recommended for all private car owners, brand new cars, luxury sedans, and daily city commuters seeking complete peace of mind.'
+        },
+        thirdparty: {
+          badge: '02 • STATUTORY MANDATORY',
+          title: 'Third-Party Liability Insurance Service',
+          tagline: 'Statutory legal insurance mandated by the Motor Vehicles Act for all Indian vehicles.',
+          desc: 'Third-Party Car Insurance protects you against legal and financial liabilities arising from accidental damage, physical injury, or loss of life caused to a third party by your insured car. It is mandatory by law under the Indian Motor Vehicles Act to drive legally on public roads.',
+          img: '../assets/images/vehicle_card.png',
+          rate: '₹2,094 / yr',
+          covered: [
+            'Third-party property damage legal cover up to ₹7.5 Lakhs',
+            'Third-party injury or loss of life legal liability',
+            'Mandatory Owner-Driver Personal Accident cover (₹15 Lakhs)',
+            '100% legal compliance under Indian Traffic Laws'
+          ],
+          excluded: [
+            'Any damage or repair costs to your OWN car',
+            'Theft or total loss of your insured car',
+            'Personal belongings inside the vehicle'
+          ],
+          recommendation: 'Ideal for older vehicles (above 10-15 years), vintage cars, or vehicles rarely driven on highways.'
+        },
+        zerodep: {
+          badge: '03 • 100% CLAIM PAYOUT',
+          title: 'Zero Depreciation (Nil Dep) Rider Service',
+          tagline: 'Zero out-of-pocket expenses on replaced car spare parts during insurance claims.',
+          desc: 'Standard insurance policies deduct 10% to 50% depreciation on replaced parts (rubber, plastic, fiber, metal) during claim settlements. Zero Depreciation (Nil Dep) add-on ensures 100% reimbursement on replaced spare parts without deducting any depreciation costs.',
+          img: '../assets/images/car_inspection.png',
+          rate: '₹1,250 / yr add-on',
+          covered: [
+            '100% claim payout for plastic & rubber components',
+            'Zero depreciation deduction on glass, fiber & metal parts',
+            'Full bumper-to-bumper claim reimbursement',
+            'Massive out-of-pocket savings during accident repair'
+          ],
+          excluded: [
+            'Tyres and battery normal wear & tear (unless damaged in accident)',
+            'Engine oil & coolant consumables (unless Consumables add-on opted)'
+          ],
+          recommendation: 'Must-have for new cars (0 to 5 years old), premium SUVs, and first-time car buyers who want zero repair bills.'
+        },
+        rsa: {
+          badge: '04 • 24/7 EMERGENCY HELP',
+          title: '24/7 Roadside Assistance (RSA) Service',
+          tagline: 'Round-the-clock emergency breakdown assistance anywhere across India.',
+          desc: 'Stuck on a highway with a flat tyre or dead battery? RSA service dispatches trained technicians and flatbed towing trucks directly to your live GPS location within 30-45 minutes, ensuring you and your family are never stranded.',
+          img: '../assets/images/hero-car.jpg',
+          rate: '₹499 / yr add-on',
+          covered: [
+            'On-site flatbed towing to nearest garage up to 50 km',
+            'Battery jumpstart & emergency ignition support',
+            'Flat tyre change & spare wheel replacement on-site',
+            'Emergency fuel delivery up to 5 Litres',
+            'Key lockout support & spare key retrieval assistance'
+          ],
+          excluded: [
+            'Cost of commercial fuel delivered (fuel cost extra)',
+            'Towing beyond 50 km (charged at standard per km rate)'
+          ],
+          recommendation: 'Highly recommended for highway travellers, road trips, family cars, and night commuters.'
+        },
+        cashless: {
+          badge: '05 • 4,500+ WORKSHOPS',
+          title: 'Cashless Garage Repair Network Service',
+          tagline: 'Hassle-free repairs with direct bill settlement between insurer and authorized workshops.',
+          desc: 'With our network of 4,500+ cashless garages, you simply hand over your vehicle to an authorized OEM workshop. InsureDrive inspects via video and pays the garage directly, eliminating out-of-pocket cash arrangements.',
+          img: '../assets/images/garage_cashless.png',
+          rate: 'Included FREE',
+          covered: [
+            'Direct cashless repair bill settlement with workshop',
+            'Digital smartphone self-video inspection approval',
+            'Authorized OEM spare parts & manufacturer warranty',
+            'Priority workshop booking & quick turnaround time'
+          ],
+          excluded: [
+            'Deductible compulsory policy co-pay amount (standard ₹1,000)',
+            'Non-network local garage bills (reimbursed via claim upload)'
+          ],
+          recommendation: 'Perfect for busy professionals who want paperless, stress-free car repair experience without arranging cash upfront.'
+        },
+        engine: {
+          badge: '06 • WATERLOGGING COVER',
+          title: 'Engine & Gearbox Protection Rider Service',
+          tagline: 'Protection against expensive engine overhaul caused by monsoon floods & waterlog.',
+          desc: 'Standard insurance excludes engine damage caused by cranking the car in waterlogged roads (Hydrostatic Lock). Engine Protect rider covers full cost of engine overhaul, crankshaft repair, & gearbox replacement.',
+          img: '../assets/images/insurance_banner.jpg',
+          rate: '₹1,580 / yr add-on',
+          covered: [
+            'Hydrostatic lock damage caused by water ingression',
+            'Engine block repair & crankshaft replacement',
+            'Gearbox assembly & differential repair costs',
+            'Engine oil leakage accidental damage cover'
+          ],
+          excluded: [
+            'Intentional driving into deep water despite warning signs',
+            'Normal engine oil consumption or lack of maintenance'
+          ],
+          recommendation: 'Essential for car owners living in flood-prone cities (Mumbai, Chennai, Bengaluru, Delhi NCR) during monsoon season.'
+        }
+      };
+
+      const urlParams = new URLSearchParams(window.location.search);
+      const serviceId = urlParams.get('id') || 'comprehensive';
+      const data = servicesData[serviceId] || servicesData.comprehensive;
+
+      document.title = `${data.title} — InsureDrive`;
+      document.getElementById('breadcrumbTitle').textContent = data.title;
+      document.getElementById('detailBadge').textContent = data.badge;
+      document.getElementById('detailTitle').textContent = data.title;
+      document.getElementById('detailTagline').textContent = data.tagline;
+      document.getElementById('detailFullDesc').textContent = data.desc;
+      document.getElementById('detailRecommendation').textContent = data.recommendation;
+      document.getElementById('sideSummaryTitle').textContent = data.title;
+      document.getElementById('sideStartingRate').textContent = data.rate;
+      if (data.img) document.getElementById('detailHeroImg').src = data.img;
+
+      // Covered
+      const coveredUl = document.getElementById('detailCoveredUl');
+      coveredUl.innerHTML = data.covered.map(item => `<li class="flex items-center gap-2"><svg width="16" height="16" fill="none" stroke="#166534" viewBox="0 0 24 24" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> ${item}</li>`).join('');
+
+      // Excluded
+      const excludedUl = document.getElementById('detailExcludedUl');
+      excludedUl.innerHTML = data.excluded.map(item => `<li class="flex items-center gap-2"><svg width="16" height="16" fill="none" stroke="#991B1B" viewBox="0 0 24 24" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> ${item}</li>`).join('');
+
+      // CTA links
+      document.getElementById('detailCtaTop').href = `compare.html?service=${serviceId}`;
+      document.getElementById('detailCtaSide').href = `compare.html?service=${serviceId}`;
+    });
+  </script>
+</body>
+</html>

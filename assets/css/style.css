@@ -5,43 +5,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
-  /* Brand Palette - Deep Navy & Insurance Green */
-  --primary: #102A43;          /* Deep Navy */
-  --primary-light: #1E3A5F;    /* Deep Navy Tint */
-  --primary-subtle: #24486D;   /* Slate Navy */
-  --secondary: #102A43;        /* Main Brand Navy */
-  --secondary-hover: #0B1D2F;  /* Dark Navy Hover */
-  --secondary-light: #F0F4F8;  /* Soft Blue-Gray Light */
-  --accent: #16A34A;           /* Insurance Green */
-  --accent-hover: #15803D;     /* Insurance Green Dark */
-  --accent-light: #F0FDF4;     /* Green Subtle Light */
+  /* Brand Palette - Deep Navy & Fintech Royal Blue */
+  --primary: #0F172A;          /* Deep Slate Navy */
+  --primary-light: #1E293B;    /* Deep Slate Tint */
+  --primary-subtle: #334155;   /* Slate Navy */
+  --secondary: #0F172A;        /* Main Brand Navy */
+  --secondary-hover: #020617;  /* Dark Navy Hover */
+  --secondary-light: #F8FAFC;  /* Soft Slate Light */
+  --accent: #2563EB;           /* Fintech Royal Blue */
+  --accent-hover: #1D4ED8;     /* Royal Blue Dark */
+  --accent-light: #EFF6FF;     /* Blue Subtle Light */
   
   /* Surfaces & Backgrounds */
-  --background: #F7F9FC;       /* Light Clean Gray-Blue */
+  --background: #F8FAFC;       /* Clean Light Slate Gray */
   --surface: #FFFFFF;
   --surface-alt: #F1F5F9;      /* Off-White Surface */
   --surface-hover: #E2E8F0;    /* Light Gray Hover */
   
   /* Typography Colors */
-  --text-primary: #172B4D;     /* Deep Slate Text */
-  --text-secondary: #64748B;   /* Slate 500 Subtext */
-  --text-muted: #94A3B8;       /* Slate 400 Muted */
+  --text-primary: #0F172A;     /* Deep Slate Text */
+  --text-secondary: #475569;   /* Slate 600 Subtext */
+  --text-muted: #64748B;       /* Slate 500 Muted */
   --text-white: #FFFFFF;
   
   /* Status Colors */
-  --success: #16A34A;
-  --success-bg: #DCFCE7;
-  --warning: #D97706;
+  --success: #10B981;
+  --success-bg: #ECFDF5;
+  --warning: #F59E0B;
   --warning-bg: #FEF3C7;
-  --danger: #DC2626;
+  --danger: #EF4444;
   --danger-bg: #FEE2E2;
-  --info: #0284C7;
-  --info-bg: #E0F2FE;
+  --info: #2563EB;
+  --info-bg: #EFF6FF;
 
   /* Borders & Dividers */
   --border: #E2E8F0;
   --border-strong: #CBD5E1;
-  --border-focus: #16A34A;
+  --border-focus: #2563EB;
 
   /* Spacing Scale (8px system) */
   --space-1: 0.25rem;  /* 4px */
@@ -2134,7 +2134,7 @@ button {
 .nav-links-lux {
   display: flex;
   align-items: center;
-  gap: 2.25rem;
+  gap: 1.25rem;
   list-style: none;
   margin: 0;
   padding: 0;
