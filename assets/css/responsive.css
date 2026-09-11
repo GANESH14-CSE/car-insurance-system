@@ -4,45 +4,53 @@
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   0. CRITICAL VIEWPORT RESET & ANTI-REGRESSION FALLBACKS
+   0. CRITICAL VIEWPORT RESET & SINGLE SCROLLBAR ENFORCEMENT
    -------------------------------------------------------------------------- */
 html {
-  height: auto !important;
-  min-height: 100% !important;
-  overflow-y: auto !important;
-  overflow-x: hidden !important;
   width: 100% !important;
   max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  height: auto !important;
+  min-height: 100% !important;
 }
 
 body {
-  height: auto !important;
-  min-height: 100vh !important;
-  overflow-y: visible !important;
-  overflow-x: hidden !important;
   width: 100% !important;
   max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: visible !important;
+  overflow-x: clip !important;
+  height: auto !important;
+  min-height: 100% !important;
   position: relative;
 }
 
-/* Force natural page height on main sections to prevent nested inner vertical scrollbars */
-main, section, .hero, .hero-fullwidth, .section, header, footer {
+/* Force natural page content height to prevent nested inner vertical scrollbars */
+main, section, article, .hero, .hero-fullwidth, .section, header, footer, .container, .page-wrapper, .site-wrapper, .wrapper, .home-wrapper, .main-wrapper, #app, #root {
+  max-width: 100% !important;
   height: auto !important;
   max-height: none !important;
   overflow-y: visible !important;
 }
 
-/* Closed drawers & modals must never produce secondary browser scrollbars */
+/* Inactive drawers & popovers must never trigger a secondary browser scrollbar */
 .sidebar:not(.active),
 .portal-dropdown:not(.active),
 .modal-backdrop:not(.active),
 .search-modal-backdrop:not(.active),
 .mobile-nav-overlay:not(.active) {
+  height: 0 !important;
+  max-height: 0 !important;
   overflow: hidden !important;
   overflow-y: hidden !important;
   overflow-x: hidden !important;
   visibility: hidden !important;
   pointer-events: none !important;
+  opacity: 0 !important;
 }
 
 /* Word Wrap Protection across all viewports */
@@ -134,13 +142,15 @@ h1, h2, h3, h4, h5, h6, p, span, div, a {
   .brand-logo-lux {
     display: inline-flex !important;
     align-items: center !important;
-    gap: 12px !important;
+    gap: 10px !important;
     font-family: 'Plus Jakarta Sans', var(--font-heading), sans-serif !important;
-    font-size: 1.35rem !important;
+    font-size: 1.3rem !important;
     font-weight: 800 !important;
     color: var(--primary, #102A43) !important;
     letter-spacing: -0.02em !important;
     text-decoration: none !important;
+    flex-shrink: 0 !important;
+    min-width: auto !important;
   }
 
   .brand-logo svg,
@@ -308,8 +318,8 @@ h1, h2, h3, h4, h5, h6, p, span, div, a {
   }
   
   .price-comparison-block {
-    grid-template-columns: 1fr !important;
-    text-align: center;
+    display: block !important;
+    width: 100% !important;
   }
 
   .container {
@@ -434,8 +444,8 @@ h1, h2, h3, h4, h5, h6, p, span, div, a {
   .brand-logo,
   .brand-logo-lux {
     font-size: 1.05rem !important;
-    flex-shrink: 1 !important;
-    min-width: 0 !important;
+    flex-shrink: 0 !important;
+    min-width: auto !important;
   }
 
   .brand-logo svg,
@@ -502,7 +512,19 @@ h1, h2, h3, h4, h5, h6, p, span, div, a {
     transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.28s ease, box-shadow 0.28s ease !important;
   }
 
+  .nav-links:not(.active) {
+    height: 0 !important;
+    max-height: 0 !important;
+    overflow: hidden !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    opacity: 0 !important;
+  }
+
   .nav-links.active {
+    height: 100vh !important;
+    height: 100dvh !important;
+    opacity: 1 !important;
     transform: translateX(0) !important;
     visibility: visible !important;
     pointer-events: auto !important;
@@ -1291,16 +1313,14 @@ h1, h2, h3, h4, h5, h6, p, span, div, a {
   }
 
   /* --- Section 28: Screenshot Bug Fixes & Image Showcase Responsiveness --- */
-  .price-comparison-block-grid,
-  .price-comparison-block {
+  .price-comparison-block-grid {
     display: grid !important;
     grid-template-columns: 1fr !important;
     gap: 16px !important;
     text-align: center !important;
   }
 
-  .price-comparison-block-grid > div,
-  .price-comparison-block > div {
+  .price-comparison-block-grid > div {
     border-right: none !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
     padding-right: 0 !important;
@@ -1308,8 +1328,7 @@ h1, h2, h3, h4, h5, h6, p, span, div, a {
     width: 100% !important;
   }
 
-  .price-comparison-block-grid > div:last-child,
-  .price-comparison-block > div:last-child {
+  .price-comparison-block-grid > div:last-child {
     border-bottom: none !important;
     padding-bottom: 0 !important;
   }
@@ -1504,7 +1523,6 @@ h1, h2, h3, h4, h5, h6, p, span, div, a {
   }
 
   .product-card-media,
-  .feature-showcase-grid > div,
   .hero-car-card,
   .promo-banner-img-frame {
     height: 140px !important;
@@ -1517,17 +1535,35 @@ h1, h2, h3, h4, h5, h6, p, span, div, a {
     margin-bottom: 6px !important;
   }
 
+  .feature-showcase-card,
+  .feature-showcase-grid > div {
+    width: 100% !important;
+    height: 220px !important;
+    min-height: 200px !important;
+    max-height: 260px !important;
+    aspect-ratio: auto !important;
+    overflow: hidden !important;
+    border-radius: var(--radius-lg, 12px) !important;
+  }
+
   .product-card-media img,
   .category-card-media img,
   .category-card img,
   .blog-featured-media img,
-  .feature-showcase-grid img,
   .hero-car-card img,
   .promo-banner-img {
     width: 100% !important;
     height: 100% !important;
     object-fit: cover !important;
-    object-position: center bottom !important;
+    object-position: center !important;
+  }
+
+  .feature-showcase-grid img,
+  .feature-showcase-card img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: top center !important;
   }
 
   /* Form & Interactive Controls Touch Targets — Section 21 & 26 */
