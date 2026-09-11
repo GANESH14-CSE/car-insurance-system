@@ -415,6 +415,8 @@ function initBlogFilter() {
 
 /* Portals Popover Menu Controller (Image 2) */
 function initPortalDropdown() {
+  updatePortalMenu();
+
   const profileBtns = document.querySelectorAll('.profile-menu-toggle, [data-portal-toggle]');
   
   profileBtns.forEach(btn => {
@@ -449,6 +451,121 @@ function initPortalDropdown() {
     }
   });
 }
+
+function updatePortalMenu() {
+  const currentUserStr = localStorage.getItem('insuredrive_user');
+  let currentUser = null;
+  try {
+    if (currentUserStr) {
+      currentUser = JSON.parse(currentUserStr);
+    }
+  } catch (e) {}
+
+  const isLoggedIn = !!(currentUser && (currentUser.email || currentUser.name));
+  const isAdmin = currentUser && currentUser.role === 'admin';
+
+  const isPagesDir = window.location.pathname.includes('/pages/');
+  const isDashboardDir = window.location.pathname.includes('/dashboard/');
+  const isAdminDir = window.location.pathname.includes('/admin/');
+
+  let loginPath = isPagesDir ? 'login.html' : 'pages/login.html';
+  let signupPath = isPagesDir ? 'quote.html' : 'pages/quote.html';
+  let userDashboardPath = isPagesDir ? '../dashboard/index.html' : 'dashboard/index.html';
+  let adminDashboardPath = isPagesDir ? '../admin/index.html' : 'admin/index.html';
+
+  if (isDashboardDir || isAdminDir) {
+    loginPath = '../pages/login.html';
+    signupPath = '../pages/quote.html';
+    userDashboardPath = '../dashboard/index.html';
+    adminDashboardPath = '../admin/index.html';
+  }
+
+  const dropdownHeaders = document.querySelectorAll('.portal-dropdown-header');
+  dropdownHeaders.forEach(header => {
+    const subtitle = header.querySelector('.portal-dropdown-subtitle');
+    if (subtitle) {
+      subtitle.textContent = isLoggedIn 
+        ? `Logged in: ${currentUser.name || currentUser.email || 'Customer'}` 
+        : 'Customer & Management Access';
+    }
+  });
+
+  const dropdowns = document.querySelectorAll('.portal-dropdown');
+  dropdowns.forEach(dropdown => {
+    const menuList = dropdown.querySelector('.portal-menu-list');
+    if (!menuList) return;
+
+    if (isLoggedIn) {
+      let menuHTML = `
+        <li class="portal-menu-item">
+          <a href="${userDashboardPath}">
+            <span class="portal-menu-icon">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            </span>
+            User Dashboard
+          </a>
+        </li>
+      `;
+
+      if (isAdmin) {
+        menuHTML += `
+          <li class="portal-menu-item">
+            <a href="${adminDashboardPath}">
+              <span class="portal-menu-icon">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </span>
+              Admin Dashboard
+            </a>
+          </li>
+        `;
+      }
+
+      menuHTML += `
+        <li class="portal-menu-item">
+          <a href="#" class="logout-link" onclick="event.preventDefault(); window.logoutPortal();">
+            <span class="portal-menu-icon">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+            </span>
+            Logout
+          </a>
+        </li>
+      `;
+
+      menuList.innerHTML = menuHTML;
+    } else {
+      menuList.innerHTML = `
+        <li class="portal-menu-item">
+          <a href="${loginPath}">
+            <span class="portal-menu-icon">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3"/></svg>
+            </span>
+            Login
+          </a>
+        </li>
+        <li class="portal-menu-item">
+          <a href="${signupPath}">
+            <span class="portal-menu-icon">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="17" y1="11" x2="23" y2="11"/></svg>
+            </span>
+            Signup
+          </a>
+        </li>
+      `;
+    }
+  });
+}
+
+window.logoutPortal = function logoutPortal() {
+  localStorage.removeItem('insuredrive_user');
+  if (typeof showToast === 'function') {
+    showToast('Logged out successfully!', 'info');
+  }
+  setTimeout(() => {
+    const isPagesDir = window.location.pathname.includes('/pages/');
+    const isSubDir = window.location.pathname.includes('/dashboard/') || window.location.pathname.includes('/admin/');
+    window.location.href = isPagesDir ? 'login.html' : (isSubDir ? '../pages/login.html' : 'pages/login.html');
+  }, 400);
+};
 
 /* RTL Toggle Controller */
 function initRtlToggle() {
